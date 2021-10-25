@@ -87,7 +87,7 @@ function ArticleForm(props) {
                     type='text'
                     name='body'
                     value={article.body}
-                    onChange={handleImage}/>
+                    onChange={handleChange}/>
             </div>
             <select onChange={handleChange} name="category" value={article.category}>
                 <option>Open selection menu</option>
