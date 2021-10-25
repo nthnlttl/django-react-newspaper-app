@@ -1,8 +1,62 @@
+* {
+  box-sizing: border-box;
+}
 .home-header {
   font-size: 50px;
   text-align: center;
+  background-color: gray;
   }
+
+img {
+  width:100;
+}
+
+.author {
+  font-style: italic;
+}
 
 #secondary-nav {
   column-gap: 15em;
+}
+
+#secondary-nav a {
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+}
+
+#secondary-full-bar {
+  border-top: black solid 2px;
+  border-bottom: black solid 2px;
+}
+
+.main-body {
+  display: flex;
+  margin: 2em;
+}
+
+.article-section {
+  width: 75%;
+  border: black solid 1px;
+  padding: 2em;
+}
+
+.home-aside {
+  width: 25%;
+  border: black solid 1px;
+  margin-left: 1em;
+}
+#main-nav {
+  list-style-type: none;
+  column-gap: 2em;
+}
+
+#main-nav a {
+  font-weight: bold;
+  text-decoration: none;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+h3 {
+  font-weight: bold;
 }
