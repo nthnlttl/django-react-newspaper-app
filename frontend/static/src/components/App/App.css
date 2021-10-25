@@ -16,13 +16,19 @@ img {
 }
 
 #secondary-nav {
+  list-style-type: none;
   column-gap: 15em;
+  margin: 0;
+  overflow: hidden;
+  background-color: #333;
 }
 
 #secondary-nav a {
   font-weight: bold;
-  color: black;
+  color: white;
   text-decoration: none;
+  padding: 14px 16px;
+  text-align: center;
 }
 
 #secondary-full-bar {
@@ -49,12 +55,15 @@ img {
 #main-nav {
   list-style-type: none;
   column-gap: 2em;
+  display: inline-block;
 }
+
 
 #main-nav a {
   font-weight: bold;
   text-decoration: none;
   font-family:Arial, Helvetica, sans-serif;
+  display: block;
 }
 
 h3 {
