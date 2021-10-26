@@ -12,6 +12,7 @@ import Home from './../Home/Home';
 
 function App() {
   const [isAuth, setIsAuth] = useState(null);
+  const [isAdmin, setIsAdmin] = useState(null);
 
   const history = useHistory();
 

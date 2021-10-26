@@ -9,32 +9,40 @@
   }
 
 img {
-  width:100;
+  width:100%;
 }
 
 .author {
   font-style: italic;
 }
 
+.navbar-brand {
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.navbar-brand:hover {
+  color: blue;
+}
 #secondary-nav {
-  list-style-type: none;
-  column-gap: 15em;
-  margin: 0;
-  overflow: hidden;
-  background-color: #333;
+  column-gap: 10em;
 }
 
 #secondary-nav a {
   font-weight: bold;
-  color: white;
+  color: black;
   text-decoration: none;
-  padding: 14px 16px;
   text-align: center;
 }
 
 #secondary-full-bar {
   border-top: black solid 2px;
   border-bottom: black solid 2px;
+}
+
+#secondary-full-bar {
+  border-top: black solid 3px;
+  border-bottom: black solid 3px;
 }
 
 .main-body {
@@ -48,15 +56,11 @@ img {
   padding: 2em;
 }
 
-.home-aside {
-  width: 25%;
-  border: black solid 1px;
-  margin-left: 1em;
-}
+
 #main-nav {
   list-style-type: none;
   column-gap: 2em;
-  display: inline-block;
+  margin: 5px;
 }
 
 
@@ -64,9 +68,70 @@ img {
   font-weight: bold;
   text-decoration: none;
   font-family:Arial, Helvetica, sans-serif;
-  display: inline;
+  align-items: center;
+  border-radius: 10px;
+  padding: 5px 10px;
+  background-color: white;
+  font-size: 12px;
+}
+
+#main-nav a:hover {
+  background-color: black;
+  color: white;
+  border: solid white 1px;
 }
 
 h3 {
   font-weight: bold;
+}
+
+.my-article-section {
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+}
+
+.my-article {
+  border:black solid 1px;
+  padding: 2em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.register-form {
+  border: solid black 1px;
+  padding: 2em;
+  background-color: #c7efcf;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
+
+#register-button {
+  border: solid black 1px;
+  background-color: white;
+  font-weight: bold;
+}
+
+#register-button:hover {
+  background-color: black;
+  color: white;
+}
+
+.login-form {
+  border: solid black 1px;
+  padding: 2em;
+  background-color: #c7efcf;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
+
+#login-button {
+  border: solid black 1px;
+  background-color: white;
+  font-weight: bold;
+}
+
+#login-button:hover {
+  background-color: black;
+  color: white;
 }
