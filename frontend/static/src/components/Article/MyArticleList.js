@@ -32,7 +32,7 @@ function MyArticleList(props) {
             <img className='fit-picture' src={article.image} alt=''/>
             <h3>{article.title}</h3>
             <p>{article.body}</p>
-            <p>{article.status}</p>
+            <p>Status: {article.status}</p>
         </div>
         );
 
