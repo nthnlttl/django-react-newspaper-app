@@ -25,7 +25,7 @@ function LoginForm(props) {
         const options = {
             method: 'POST',
             header: {
-                'Content-Type':'applicatoin/json',
+                'Content-Type':'application/json',
                 'X-CSRFToken': Cookies.get('csrftoken'),
             },
             body: JSON.stringify(user)
@@ -37,7 +37,10 @@ function LoginForm(props) {
         } else {
             const data = await response.json();
             Cookies.set('Authorization', `Token ${data.key}`);
-            props.setIsAuth(true);
+            props.setUser((prevState) => ({
+                ...prevState,
+                isAuth: true,
+            }))
             props.history.push('/');
         }
     }
@@ -73,7 +76,7 @@ function LoginForm(props) {
                     value={user.password}
                 />
             </div>
-            <button type='submit' className='btn btn-success'>Login</button>
+            <button type='submit' className='btn btn-success' id='login-button'>Login</button>
 
         </form>
     )

@@ -8,38 +8,50 @@ function Header(props) {
                 <button className='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarResponsive' aria-controls='navbarResponsive' aria-expanded='false' aria-label='Toggle navigation'>
                     <span className='navbar-toggler-icon'></span>
                 </button>
-                <div className="collapse navbar-collapse" id="navbarResponsive">
-                    <ul className="navbar-nav ml-auto"
+                <div className='collapse navbar-collapse' id='navbarResponsive'>
+                    <ul className='navbar-nav ml-auto'
                     className='container d-flex justify-content-end'
                     id='main-nav'>
-                        <li className="nav-item">
-                            <NavLink to='/'>Home</NavLink>
+                        <li className='nav-item'>
+                            <NavLink to='/'> Home </NavLink>
                         </li>
-                        <li className="nav-item">
-                            <NavLink to='/'>Profile</NavLink>
-                        </li>
-                        <li className="nav-item">
-                            <NavLink to='/login'>Login</NavLink>
-                        </li>
-                        <li className="nav-item">
-                            <NavLink to='/registration'>Register</NavLink>
-                        </li>
-                        {props.isAuth && (
+                        {!props.isAuth && (
+                            <>
+                                <li className='nav-item'>
+                                    <NavLink to='/login'> Login </NavLink>
+                                </li>
+                                <li className='nav-item'>
+                                    <NavLink to='/registration'> Register </NavLink>
+                                </li>
+                            </>
+                        )}
+
+                        {props.isAuth && !props.isAdmin && (
                             <>
                             <li className='nav-item'>
-                                <NavLink to='/articles/create'>Submit Article</NavLink>
+                                <NavLink to='/articles/create'> Submit Article </NavLink>
                             </li>
                             <li className='nav-item'>
                                 <NavLink to='/articles/myarticles'>My Articles</NavLink>
                             </li>
                             </>
                         )}
+                        {props.isAdmin && (
+                        
+                            <li className='nav-item'>
+                                <NavLink to='/articles/admin'>Admin</NavLink>
+                            </li>
+ 
+                        )}
+                        {props.isAuth && (
+                            <button type="submit" className="logout" onClick={() => props.handleLogout()}>Logout</button>
+                        )}
+                       
                     </ul>
                 </div>
             </div>
+
         </nav>
     )
-
 }
-
 export default Header;
